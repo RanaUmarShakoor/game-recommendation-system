@@ -1,6 +1,6 @@
 # Game Recommendation System 🎮
 
-A Python-based recommendation system that suggests games similar to a given title using text-based feature extraction and cosine similarity.
+A Jupyter Notebook-based recommendation system that suggests games similar to a given title using text-based feature extraction and cosine similarity.
 
 ---
 
@@ -17,16 +17,16 @@ A Python-based recommendation system that suggests games similar to a given titl
 
 ## Introduction
 
-The Game Recommendation System uses a content-based filtering approach to recommend games. It processes game metadata, extracts textual features, and calculates similarity scores to provide personalized suggestions.
+This project builds a Game Recommendation System using a content-based filtering approach. It leverages game metadata such as tags and genres to recommend games similar to a given game using text-based feature extraction and cosine similarity.
 
 ---
 
 ## Features
 
-- Content-based filtering using game metadata
+- Content-based filtering using game metadata (tags and genres)
 - Text feature extraction with `CountVectorizer`
 - Cosine similarity for game recommendations
-- Memory-efficient processing with sparse matrices
+- Memory-efficient processing using sparse matrices
 
 ---
 
@@ -37,17 +37,20 @@ The Game Recommendation System uses a content-based filtering approach to recomm
 - NumPy
 - Scikit-learn
 - Scipy
+- Jupyter Notebook
 
 ---
 
 ## Dataset
 
-The project uses the following datasets:
-1. **Users Dataset** (`users.csv`): Contains user-related information.
-2. **Games Dataset** (`games.csv`): Metadata about games, including tags and app IDs.
-3. **Games Metadata** (`games_metadata.json`): Detailed information about games, such as genres, developers, and tags.
+The project uses the following dataset:
 
-Ensure these datasets are placed in the `datasets` folder.
+- **Game Recommendations on Steam**: [Kaggle Dataset Link](https://www.kaggle.com/datasets/antonkozyriev/game-recommendations-on-steam)  
+  This dataset includes metadata about Steam games, such as game titles, app IDs, tags, and other relevant details.
+
+To use this dataset:
+1. Download the dataset from Kaggle.
+2. Place the relevant files (`games.csv`, `games_metadata.json`, etc.) in the `datasets` folder of the project.
 
 ---
 
@@ -70,20 +73,15 @@ Ensure these datasets are placed in the `datasets` folder.
     pip install -r requirements.txt
     ```
 
-4. Place the required datasets in the `datasets` directory.
+4. Download the dataset from Kaggle and place the files in the `datasets` folder.
 
 ---
 
 ## Usage
 
-1. Run the script:
-    ```bash
-    python game_recommendation.py
-    ```
-
-2. Modify the `game_to_recommend` variable in the `if __name__ == "__main__":` block to input a game title from the dataset.
-
-3. View the recommendations in the console output.
+1. Open the Jupyter Notebook file (`Game_Recommendation_System.ipynb`).
+2. Run all cells to load and preprocess the data, followed by generating game recommendations.
+3. Modify the `game_to_recommend` variable to input a game title from the dataset.
 
 ---
 
@@ -92,3 +90,14 @@ Ensure these datasets are placed in the `datasets` folder.
 ### Input:
 ```python
 game_to_recommend = "Escape Dead Island"
+```
+
+### Output:
+```
+Games similar to 'Escape Dead Island':
+1. Sniper Elite: Nazi Zombie Army
+2. How To Survive: Third Person Standalone
+3. Cold Fear™
+4. Sniper Elite: Nazi Zombie Army 2
+5. The Evil Within 2
+```
