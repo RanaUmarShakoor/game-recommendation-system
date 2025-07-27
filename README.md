@@ -62,18 +62,7 @@ To use this dataset:
     cd game-recommendation-system
     ```
 
-2. Create a virtual environment (optional but recommended):
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
-    ```
-
-3. Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. Download the dataset from Kaggle and place the files in the `datasets` folder.
+2. Download the dataset from Kaggle and place the files in the `datasets` folder.
 
 ---
 
